@@ -67,5 +67,3 @@ window.onload = () => {
         }
     );
 };
-view raw
-script.js hosted with ❤ by GitHub
