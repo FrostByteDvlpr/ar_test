@@ -51,14 +51,11 @@ window.onload = () => {
                     placeText.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     placeText.setAttribute('title', place.name);
                     placeText.setAttribute('scale', '15 15 15');
+                    placeText.setAttribute('class', 'placeText');
                     
                     placeText.addEventListener('loaded', () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
                     });
-
-                    document.querySelectorAll('[placeText]').forEach(text => {
-                        text.classList.add('placeText');
-                    })
 
                     scene.appendChild(placeText);
                 });
