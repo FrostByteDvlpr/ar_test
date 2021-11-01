@@ -58,7 +58,7 @@ window.onload = () => {
                     });
 
                     document.querySelectorAll('.placeText').forEach((text) => {
-                        text.style.fontSize = '2em';
+                        text.style.fontSize = '5em';
                         text.style.textShadow = '0px 1px 3px rgba(0,0,0,.25)';
                     });
 
