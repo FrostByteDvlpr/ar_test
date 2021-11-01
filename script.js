@@ -57,7 +57,10 @@ window.onload = () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
                     });
 
-                    document.querySelectorAll('.placeText').forEach((text) => console.log(text))
+                    document.querySelectorAll('.placeText').forEach((text) => {
+                        text.style.fontSize = '2em';
+                        text.style.textShadow = '0px 1px 3px rgba(0,0,0,.25)';
+                    });
 
                     scene.appendChild(placeText);
                 });
