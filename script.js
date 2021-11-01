@@ -68,7 +68,15 @@ window.onload = () => {
                             } else {
                                 placeText.setAttribute('scale', '15 15 15');
                             }
-                        })
+                        });
+                        text.addEventListener('touchstart', (text) => {
+                            isClicked = !isClicked;
+                            if(isClicked) {
+                                text.setAttribute('scale', '25 25 25');
+                            } else {
+                                placeText.setAttribute('scale', '15 15 15');
+                            }
+                        });
                     });
 
                     scene.appendChild(placeText);
