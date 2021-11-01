@@ -42,6 +42,7 @@ window.onload = () => {
         loadPlaces(position.coords)
             .then((places) => {
                 places.forEach((place) => {
+                    console.log(place)
                     const latitude = place.location.lat;
                     const longitude = place.location.lng;
 
