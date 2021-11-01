@@ -64,16 +64,20 @@ window.onload = () => {
                         text.addEventListener('click', (text) => {
                             isClicked = !isClicked;
                             if(isClicked) {
+                                text.removeAttribute('scale');
                                 text.setAttribute('scale', '25 25 25');
                             } else {
+                                text.removeAttribute('scale');
                                 placeText.setAttribute('scale', '15 15 15');
                             }
                         });
                         text.addEventListener('touchstart', (text) => {
                             isClicked = !isClicked;
                             if(isClicked) {
+                                text.removeAttribute('scale');
                                 text.setAttribute('scale', '25 25 25');
                             } else {
+                                text.removeAttribute('scale');
                                 placeText.setAttribute('scale', '15 15 15');
                             }
                         });
