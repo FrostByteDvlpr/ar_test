@@ -47,23 +47,20 @@ window.onload = () => {
                     const longitude = place.location.lng;
 
                     // add place name
-                    const placeText = document.createElement('a-box');
+                    const placeText = document.createElement('a-link');
                     placeText.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     placeText.setAttribute('title', place.name);
                     placeText.setAttribute('scale', '15 15 15');
                     placeText.setAttribute('class', 'placeText');
-                    placeText.setAttribute('material', 'yellow');
-                    placeText.setAttribute('position', '0 30 0');
                     
                     placeText.addEventListener('loaded', () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
                     });
 
-                    // document.querySelectorAll('.placeText').forEach((text) => {
-                    //     text.style.fontSize = '5em';
-                    //     text.style.textShadow = '0px 1px 3px rgba(0,0,0,.25)';
-                        
-                    // });
+                    document.querySelectorAll('.placeText').forEach((text) => {
+                        text.style.fontSize = '5em';
+                        text.style.textShadow = '0px 1px 3px rgba(0,0,0,.25)';
+                    });
 
                     scene.appendChild(placeText);
                 });
